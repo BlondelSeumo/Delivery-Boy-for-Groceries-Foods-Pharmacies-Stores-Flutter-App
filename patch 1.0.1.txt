@@ -1,0 +1,63 @@
+Index: lib/src/pages/settings.dart
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- lib/src/pages/settings.dart	(revision 396000a9e32b220630db71549864665bf7c52191)
++++ lib/src/pages/settings.dart	(date 1588960617658)
+@@ -65,7 +65,7 @@
+                               child: InkWell(
+                                 borderRadius: BorderRadius.circular(300),
+                                 onTap: () {
+-                                  Navigator.of(context).pushNamed('/Tabs', arguments: 1);
++                                  Navigator.of(context).pushNamed('/Pages', arguments: 0);
+                                 },
+                                 child: CircleAvatar(
+                                   backgroundImage: NetworkImage(currentUser.value.image.thumb),
+Index: lib/src/pages/forget_password.dart
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- lib/src/pages/forget_password.dart	(revision 396000a9e32b220630db71549864665bf7c52191)
++++ lib/src/pages/forget_password.dart	(date 1589015342058)
+@@ -17,7 +17,6 @@
+   _ForgetPasswordWidgetState() : super(UserController()) {
+     _con = controller;
+   }
+-
+   @override
+   void initState() {
+     super.initState();
+Index: lib/src/pages/login.dart
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- lib/src/pages/login.dart	(revision 396000a9e32b220630db71549864665bf7c52191)
++++ lib/src/pages/login.dart	(date 1589015444665)
+@@ -143,7 +143,7 @@
+                 children: <Widget>[
+                   FlatButton(
+                     onPressed: () {
+-                      // Navigator.of(context).pushReplacementNamed('/SignUp');
++                      Navigator.of(context).pushReplacementNamed('/ForgetPassword');
+                     },
+                     textColor: Theme.of(context).hintColor,
+                     child: Text(S.of(context).i_forgot_password),
+Index: lib/src/elements/DrawerWidget.dart
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- lib/src/elements/DrawerWidget.dart	(revision 396000a9e32b220630db71549864665bf7c52191)
++++ lib/src/elements/DrawerWidget.dart	(date 1588960249461)
+@@ -33,7 +33,7 @@
+               children: <Widget>[
+                 GestureDetector(
+                   onTap: () {
+-                    Navigator.of(context).pushNamed('/Pages', arguments: 1);
++                    Navigator.of(context).pushNamed('/Pages', arguments: 0);
+                   },
+                   child: UserAccountsDrawerHeader(
+                     decoration: BoxDecoration(
